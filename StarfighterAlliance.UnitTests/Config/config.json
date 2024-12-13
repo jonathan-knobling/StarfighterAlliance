@@ -1,0 +1,12 @@
+{
+  "ObstacleHealthModifier": 1.5,
+  "SpaceshipTypes": [
+    {
+      "Name": "TestShip",
+      "SerializedName": "TestShip",
+      "Health": 100,
+      "AttackDamage": 50,
+      "Speed": 300
+    }
+  ]
+}

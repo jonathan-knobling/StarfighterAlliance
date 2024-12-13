@@ -1,0 +1,18 @@
+[gd_scene load_steps=7 format=3 uid="uid://y7ewj4esvcmu"]
+
+[ext_resource type="Script" path="res://Scenes/SceneController.cs" id="1_ey7fk"]
+[ext_resource type="Script" path="res://Main.cs" id="1_oewgq"]
+[ext_resource type="PackedScene" uid="uid://cgnjywltp8dhg" path="res://Scenes/StartScreen/start_screen.tscn" id="2_2pxqe"]
+[ext_resource type="PackedScene" uid="uid://f6lhqad62rfy" path="res://Scenes/GameScreen/game_screen.tscn" id="3_ekjw0"]
+[ext_resource type="PackedScene" uid="uid://bfhlq1yte0kki" path="res://Scenes/EndScreen/end_screen.tscn" id="4_gr2ph"]
+[ext_resource type="PackedScene" uid="uid://bgoaisqtnq3qn" path="res://Scenes/SelectionScreen/selection_screen.tscn" id="4_jbmar"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_oewgq")
+
+[node name="Scene Controller" type="Node" parent="."]
+script = ExtResource("1_ey7fk")
+StartScreen = ExtResource("2_2pxqe")
+SpaceshipSelectionScreen = ExtResource("4_jbmar")
+GameScreen = ExtResource("3_ekjw0")
+EndScreen = ExtResource("4_gr2ph")

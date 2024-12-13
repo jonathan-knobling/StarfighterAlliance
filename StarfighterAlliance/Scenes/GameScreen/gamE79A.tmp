@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://f6lhqad62rfy"]
+
+[ext_resource type="Texture2D" uid="uid://ddjby13xx7v2q" path="res://Space Background.png" id="1_4vsdp"]
+[ext_resource type="Script" path="res://Scenes/GameScreen/GameScreenController.cs" id="1_c3ajm"]
+[ext_resource type="Script" path="res://spaceship.gd" id="3_eibp8"]
+[ext_resource type="Texture2D" uid="uid://bgkh78m1c4gwl" path="res://Spaceship/XWing.png" id="3_wty75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dm1jb"]
+size = Vector2(803.573, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0bp3"]
+size = Vector2(6.72729, 34.3398)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqim0"]
+size = Vector2(19.6759, 131.942)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfltk"]
+size = Vector2(9.53635, 15.2084)
+
+[node name="Game Screen" type="Node2D"]
+script = ExtResource("1_c3ajm")
+
+[node name="Background Texture" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_4vsdp")
+
+[node name="spaceship" type="CharacterBody2D" parent="."]
+script = ExtResource("3_eibp8")
+
+[node name="Spaceship" type="Sprite2D" parent="spaceship"]
+z_index = 1
+position = Vector2(1002, 948)
+scale = Vector2(6, 6)
+texture = ExtResource("3_wty75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spaceship"]
+position = Vector2(1002, 983)
+rotation = -3.14159
+scale = Vector2(0.233955, -1)
+shape = SubResource("RectangleShape2D_dm1jb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="spaceship"]
+position = Vector2(1002, 908.5)
+scale = Vector2(5.31573, 2.59174)
+shape = SubResource("RectangleShape2D_d0bp3")
+
+[node name="Bounds" type="Area2D" parent="."]
+
+[node name="Bottom" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(960.75, 1082.5)
+scale = Vector2(98.1152, 0.0378945)
+shape = SubResource("RectangleShape2D_vqim0")
+
+[node name="Top" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(960, -2.5)
+scale = Vector2(98.1152, 0.0378945)
+shape = SubResource("RectangleShape2D_vqim0")
+
+[node name="Left" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(-3, 540)
+scale = Vector2(0.629172, -71.0135)
+shape = SubResource("RectangleShape2D_nfltk")
+
+[node name="Right" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(1923, 540)
+scale = Vector2(0.629172, -71.0135)
+shape = SubResource("RectangleShape2D_nfltk")

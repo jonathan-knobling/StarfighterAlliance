@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://bgoaisqtnq3qn"]
+
+[ext_resource type="Texture2D" uid="uid://ddjby13xx7v2q" path="res://Space Background.png" id="1_5jyd1"]
+[ext_resource type="Script" path="res://Scenes/SelectionScreen/SelectionScreenController.cs" id="1_pmskc"]
+[ext_resource type="PackedScene" uid="uid://1yko4wl2sfjt" path="res://Scenes/SelectionScreen/selection_module.tscn" id="2_1ws10"]
+[ext_resource type="FontFile" uid="uid://dlqvf4dh1luk2" path="res://Vermin Vibes 1989.ttf" id="2_bqn1d"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nnjgs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_51pd5"]
+font = ExtResource("2_bqn1d")
+font_size = 96
+
+[node name="Spaceship Selection Screen" type="CanvasLayer"]
+script = ExtResource("1_pmskc")
+
+[node name="Background Texture" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_5jyd1")
+
+[node name="Shadow Overlay" type="TextureRect" parent="Background Texture"]
+modulate = Color(0, 0, 0, 0.560784)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("CanvasTexture_nnjgs")
+
+[node name="Heading" type="Label" parent="."]
+offset_left = 492.0
+offset_top = 60.0
+offset_right = 1490.0
+offset_bottom = 144.0
+text = "Starfighter Alliance"
+label_settings = SubResource("LabelSettings_51pd5")
+
+[node name="Selection Module Left" parent="." instance=ExtResource("2_1ws10")]
+offset_left = 64.0
+offset_top = 108.0
+offset_right = -1216.0
+offset_bottom = 108.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Selection Module Mid" parent="." instance=ExtResource("2_1ws10")]
+offset_left = 640.0
+offset_right = -640.0
+
+[node name="Selection Module Right" parent="." instance=ExtResource("2_1ws10")]
+offset_left = 1344.0
+offset_top = 108.0
+offset_right = 64.0
+offset_bottom = 108.0
+scale = Vector2(0.8, 0.8)
+
+[node name="Select Button" type="Button" parent="."]
+offset_left = 795.0
+offset_top = 963.0
+offset_right = 1150.0
+offset_bottom = 1055.0
+theme_override_fonts/font = ExtResource("2_bqn1d")
+theme_override_font_sizes/font_size = 96
+text = "select"
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(713, 788)
+points = PackedVector2Array(0, 0, 500, 0)
+width = 5.0
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(713, 246)
+points = PackedVector2Array(0, 0, 500, 0)
+width = 5.0
+
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(715, 244)
+points = PackedVector2Array(0, 0, 0, 546)
+width = 5.0
+
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(1211, 244)
+points = PackedVector2Array(0, 0, 0, 546)
+width = 5.0

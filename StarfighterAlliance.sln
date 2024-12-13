@@ -1,0 +1,53 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarfighterAlliance", "starfighteralliance\StarfighterAlliance.csproj", "{4D7AFF93-7688-4770-9F8A-D568AE139FE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarfighterAlliance.Core", "StarfighterAlliance.Core\StarfighterAlliance.Core.csproj", "{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarfighterAlliance.Infrastructure", "StarfighterAlliance.Infrastructure\StarfighterAlliance.Infrastructure.csproj", "{37D90E78-8159-4D5D-820C-5B506B3A72E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1BB68839-7E61-4AE5-A6A8-691CD0EA4D38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D522C598-A7FB-4B87-9654-ECDB52C5B11E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarfighterAlliance.UnitTests", "StarfighterAlliance.UnitTests\StarfighterAlliance.UnitTests.csproj", "{CF21EAFE-E9BD-4A61-86AD-D344734902C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D7AFF93-7688-4770-9F8A-D568AE139FE0} = {1BB68839-7E61-4AE5-A6A8-691CD0EA4D38}
+		{3CD051C1-6BA6-4646-BC87-90BFDE4844D3} = {1BB68839-7E61-4AE5-A6A8-691CD0EA4D38}
+		{37D90E78-8159-4D5D-820C-5B506B3A72E5} = {1BB68839-7E61-4AE5-A6A8-691CD0EA4D38}
+		{CF21EAFE-E9BD-4A61-86AD-D344734902C2} = {D522C598-A7FB-4B87-9654-ECDB52C5B11E}
+	EndGlobalSection
+EndGlobal

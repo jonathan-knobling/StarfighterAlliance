@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj6mbk717dsrk"]
+
+[ext_resource type="Script" path="res://Spaceships/Spaceship.cs" id="1_1fyjg"]
+[ext_resource type="PackedScene" uid="uid://qfarcea6iddw" path="res://Spaceships/Shots/shot.tscn" id="2_3j3nx"]
+[ext_resource type="Shader" path="res://Spaceships/highlight.gdshader" id="2_djuej"]
+[ext_resource type="Texture2D" uid="uid://btspgo3aljw7n" path="res://Spaceships/MilleniumFalcon.png" id="3_t50p8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tg443"]
+shader = ExtResource("2_djuej")
+shader_parameter/original_color = Color(1, 0, 1, 1)
+shader_parameter/swap_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_q1pic"]
+
+[node name="Millenium Falcon" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_1fyjg")
+ShotScene = ExtResource("2_3j3nx")
+
+[node name="Texture" type="Sprite2D" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_tg443")
+position = Vector2(0, 5)
+scale = Vector2(6, 6)
+texture = ExtResource("3_t50p8")
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-21, -81, -61, -1, -61, 57, -20, 95, 25, 95, 61, 59, 61, -5, 67, -12, 67, -37, 39, -38, 22, -81)
+
+[node name="Healthbar" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+position = Vector2(-75, 105)
+scale = Vector2(150, 6)
+texture = SubResource("CanvasTexture_q1pic")
+centered = false
+
+[node name="Shot Spawnpoint" type="Node2D" parent="."]
+position = Vector2(0, -49)

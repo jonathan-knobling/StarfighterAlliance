@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://c41ihdooylilp"]
+
+[ext_resource type="Script" path="res://Spaceships/XWing.cs" id="1_0yl8n"]
+[ext_resource type="Shader" path="res://Spaceships/highlight.gdshader" id="1_pnc6x"]
+[ext_resource type="PackedScene" uid="uid://qfarcea6iddw" path="res://Spaceships/Shots/shot.tscn" id="2_s1u2d"]
+[ext_resource type="Texture2D" uid="uid://bgkh78m1c4gwl" path="res://Spaceships/XWing.png" id="2_wve2q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tg443"]
+shader = ExtResource("1_pnc6x")
+shader_parameter/original_color = Color(1, 0, 1, 1)
+shader_parameter/swap_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2hluu"]
+
+[node name="X-Wing" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_0yl8n")
+ShotScene = ExtResource("2_s1u2d")
+
+[node name="Texture" type="Sprite2D" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_tg443")
+scale = Vector2(6, 6)
+texture = ExtResource("2_wve2q")
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-84, 14, -33, 16, -12, -80, 11, -80, 31, 15, 83, 17, 86, 58, 33, 68, 32, 84, -31, 84, -34, 67, -85, 61)
+
+[node name="Healthbar" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+position = Vector2(-75, 100)
+scale = Vector2(150, 6)
+texture = SubResource("CanvasTexture_2hluu")
+centered = false
+
+[node name="Shot Spawnpoint" type="Node2D" parent="."]
+position = Vector2(-81, -18)
+
+[node name="Shot Spawnpoint2" type="Node2D" parent="."]
+position = Vector2(81, -18)

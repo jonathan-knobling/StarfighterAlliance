@@ -1,0 +1,26 @@
+<Project Sdk="Godot.NET.Sdk/4.3.0">
+    <PropertyGroup>
+        <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net7.0</TargetFramework>
+        <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <Nullable>enable</Nullable>
+        <LangVersion>default</LangVersion>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>default</LangVersion>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <!--Disable warning of invalid/incompatible GodotSharp version-->
+        <NoWarn>NU1605</NoWarn>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0"/>
+        <PackageReference Include="gdUnit4.api" Version="4.3.1"/>
+        <PackageReference Include="Godot.DependencyInjection" Version="0.2.3"/>
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0"/>
+        <PackageReference Include="System.IO.Abstractions" Version="21.1.3"/>
+        <PackageReference Include="websocketsharp.core" Version="1.0.1"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\StarfighterAlliance.Core\StarfighterAlliance.Core.csproj"/>
+        <ProjectReference Include="..\StarfighterAlliance.Infrastructure\StarfighterAlliance.Infrastructure.csproj"/>
+    </ItemGroup>
+</Project>

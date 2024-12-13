@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgnjywltp8dhg"]
+
+[ext_resource type="Script" path="res://Scenes/StartScreen/StartScreenController.cs" id="1_goa0w"]
+[ext_resource type="Texture2D" uid="uid://ddjby13xx7v2q" path="res://Space Background.png" id="2_rfcga"]
+[ext_resource type="FontFile" uid="uid://dlqvf4dh1luk2" path="res://Vermin Vibes 1989.ttf" id="3_vi2am"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3d3hb"]
+font = ExtResource("3_vi2am")
+font_size = 96
+
+[node name="Start Screen" type="CanvasLayer"]
+script = ExtResource("1_goa0w")
+
+[node name="Background Texture" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_rfcga")
+
+[node name="Heading" type="Label" parent="."]
+offset_left = 492.0
+offset_top = 60.0
+offset_right = 1490.0
+offset_bottom = 144.0
+text = "Starfighter Alliance"
+label_settings = SubResource("LabelSettings_3d3hb")
+
+[node name="Menu Container" type="GridContainer" parent="."]
+offset_left = 728.0
+offset_top = 434.0
+offset_right = 1294.0
+offset_bottom = 550.0
+
+[node name="Start Game Button" type="Button" parent="Menu Container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_vi2am")
+theme_override_font_sizes/font_size = 96
+text = " Start game "
+
+[node name="Quit Game Button" type="Button" parent="Menu Container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_vi2am")
+theme_override_font_sizes/font_size = 96
+text = "quit game"

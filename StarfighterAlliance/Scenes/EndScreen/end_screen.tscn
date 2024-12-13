@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfhlq1yte0kki"]
+
+[ext_resource type="Texture2D" uid="uid://ddjby13xx7v2q" path="res://Space Background.png" id="1_26ven"]
+[ext_resource type="Script" path="res://Scenes/EndScreen/EndScreenController.cs" id="1_wowjm"]
+[ext_resource type="FontFile" uid="uid://dlqvf4dh1luk2" path="res://Vermin Vibes 1989.ttf" id="2_tisgv"]
+[ext_resource type="PackedScene" uid="uid://c2l7o54v8xcbl" path="res://Scenes/EndScreen/highscore_entry.tscn" id="4_rx7nj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_257fc"]
+font = ExtResource("2_tisgv")
+font_size = 96
+
+[node name="End Screen" type="CanvasLayer"]
+script = ExtResource("1_wowjm")
+HighscoreEntryComponent = ExtResource("4_rx7nj")
+
+[node name="Background Texture" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_26ven")
+
+[node name="Heading" type="Label" parent="."]
+offset_left = 749.0
+offset_top = 66.0
+offset_right = 1747.0
+offset_bottom = 150.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_257fc")
+
+[node name="High Score List" type="VBoxContainer" parent="."]
+offset_left = 482.0
+offset_top = 265.0
+offset_right = 522.0
+offset_bottom = 765.0
+theme_override_constants/separation = 50
+
+[node name="Menu Container" type="GridContainer" parent="."]
+offset_left = 518.0
+offset_top = 947.0
+offset_right = 1472.0
+offset_bottom = 1063.0
+theme_override_constants/h_separation = 50
+columns = 2
+
+[node name="Main Menu Button" type="Button" parent="Menu Container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tisgv")
+theme_override_font_sizes/font_size = 96
+text = " Main Menu "
+
+[node name="Quit Game Button" type="Button" parent="Menu Container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tisgv")
+theme_override_font_sizes/font_size = 96
+text = "quit game"

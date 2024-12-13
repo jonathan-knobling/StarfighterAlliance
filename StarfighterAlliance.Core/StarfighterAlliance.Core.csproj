@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>default</LangVersion>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GodotSharp" Version="4.3.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0"/>
+        <PackageReference Include="System.IO.Abstractions" Version="21.1.7"/>
+        <PackageReference Include="websocketsharp.core" Version="1.0.1"/>
+    </ItemGroup>
+
+</Project>

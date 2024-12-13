@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://dr5qbtjr0mcw3"]
+
+[ext_resource type="Script" path="res://Spaceships/YWing.cs" id="1_osxeb"]
+[ext_resource type="Shader" path="res://Spaceships/highlight.gdshader" id="2_261d6"]
+[ext_resource type="PackedScene" uid="uid://cf2i25eyfjkp3" path="res://Spaceships/Shots/missile.tscn" id="2_kohsq"]
+[ext_resource type="PackedScene" uid="uid://qfarcea6iddw" path="res://Spaceships/Shots/shot.tscn" id="3_211eb"]
+[ext_resource type="Texture2D" uid="uid://bqmdgro6ltvrb" path="res://Spaceships/YWing.png" id="3_btjj6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tg443"]
+shader = ExtResource("2_261d6")
+shader_parameter/original_color = Color(1, 0, 1, 1)
+shader_parameter/swap_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5n67c"]
+
+[node name="Y-Wing" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_osxeb")
+MissileScene = ExtResource("2_kohsq")
+ShotScene = ExtResource("3_211eb")
+
+[node name="Texture" type="Sprite2D" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_tg443")
+scale = Vector2(6, 6)
+texture = ExtResource("3_btjj6")
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, -79, -24, -13, -55, -13, -54, 90, -36, 90, -31, 48, 31, 48, 36, 90, 54, 90, 54, -14, 24, -14, 15, -79)
+
+[node name="Healthbar" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+z_index = 1
+position = Vector2(-75, 100)
+scale = Vector2(150, 6)
+texture = SubResource("CanvasTexture_5n67c")
+centered = false
+
+[node name="Shot Spawnpoint" type="Node2D" parent="."]
+position = Vector2(0, -84)

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf2i25eyfjkp3"]
+
+[ext_resource type="Script" path="res://Spaceships/Shots/Missile.cs" id="1_qqivy"]
+[ext_resource type="Texture2D" uid="uid://knn7nppun5x5" path="res://Spaceships/Shots/Shot.png" id="2_vetkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4h5rq"]
+size = Vector2(18, 36)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sq5v5"]
+
+[node name="Missile" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_qqivy")
+
+[node name="Missile Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4h5rq")
+
+[node name="Explosion Radius" type="Area2D" parent="."]
+scale = Vector2(30, 30)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Explosion Radius"]
+shape = SubResource("CircleShape2D_sq5v5")
+
+[node name="Texture" type="Sprite2D" parent="."]
+scale = Vector2(6, 6)
+texture = ExtResource("2_vetkb")

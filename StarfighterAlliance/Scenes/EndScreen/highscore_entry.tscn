@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2l7o54v8xcbl"]
+
+[ext_resource type="Script" path="res://Scenes/EndScreen/HighscoreEntry.cs" id="1_5cs58"]
+[ext_resource type="FontFile" uid="uid://dlqvf4dh1luk2" path="res://Vermin Vibes 1989.ttf" id="1_lmj25"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1q4ep"]
+font = ExtResource("1_lmj25")
+font_size = 48
+
+[node name="Highscore Entry" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5cs58")
+
+[node name="Properties" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1028.0
+offset_bottom = 42.0
+
+[node name="Score Position" type="Label" parent="Properties"]
+layout_mode = 2
+offset_right = 36.0
+offset_bottom = 42.0
+text = "10"
+label_settings = SubResource("LabelSettings_1q4ep")
+horizontal_alignment = 1
+
+[node name="Score Amount" type="Label" parent="Properties"]
+layout_mode = 2
+offset_left = 71.0
+offset_right = 206.0
+offset_bottom = 42.0
+text = "55555"
+label_settings = SubResource("LabelSettings_1q4ep")
+horizontal_alignment = 1
+
+[node name="Wave Count" type="Label" parent="Properties"]
+layout_mode = 2
+offset_left = 241.0
+offset_right = 322.0
+offset_bottom = 42.0
+text = "323"
+label_settings = SubResource("LabelSettings_1q4ep")
+horizontal_alignment = 1
+
+[node name="Spaceship Type" type="Label" parent="Properties"]
+layout_mode = 2
+offset_left = 357.0
+offset_right = 738.0
+offset_bottom = 42.0
+text = "millenium falcon"
+label_settings = SubResource("LabelSettings_1q4ep")
+horizontal_alignment = 1
+
+[node name="Timestamp" type="Label" parent="Properties"]
+layout_mode = 2
+offset_left = 773.0
+offset_right = 1028.0
+offset_bottom = 42.0
+text = "22.22.24 02:06"
+label_settings = SubResource("LabelSettings_1q4ep")
+horizontal_alignment = 1
+
+[node name="Selection" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Line2D" type="Line2D" parent="Selection"]
+position = Vector2(-8, -1)
+points = PackedVector2Array(0, 0, 1100, 0)
+width = 3.0
+
+[node name="Line2D2" type="Line2D" parent="Selection"]
+position = Vector2(-8, 37)
+points = PackedVector2Array(0, 0, 1100, 0)
+width = 3.0
+
+[node name="Line2D3" type="Line2D" parent="Selection"]
+position = Vector2(-7, -2)
+points = PackedVector2Array(0, 0, 0, 40)
+width = 3.0
+
+[node name="Line2D4" type="Line2D" parent="Selection"]
+position = Vector2(1091, -2)
+points = PackedVector2Array(0, 0, 0, 40)
+width = 3.0

@@ -1,0 +1,27 @@
+{
+	"ObstacleHealthModifier": 1.0,
+	"SpaceshipTypes": 
+	[
+		{
+			"Name": "X-Wing",
+			"SerializedName": "XWing",
+			"Health": 6,
+			"AttackDamage": 5,
+			"Speed": 900
+		},
+		{
+			"Name": "Millenium Falcon",
+			"SerializedName": "MilleniumFalcon",
+			"Health": 10,
+			"AttackDamage": 8,
+			"Speed": 700
+		},
+		{
+			"Name": "Y-Wing",
+			"SerializedName": "YWing",
+			"Health": 8,
+			"AttackDamage": 8,
+			"Speed": 550
+		}
+	]
+}
